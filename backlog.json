@@ -1,0 +1,4 @@
+[
+  {"title":"T0.1 Repo mono-repo & CI","body":"Init mono-repo structure and CI.","labels":"infra,sprint-0","estimation":"1d"},
+  {"title":"T1.1 Auth API","body":"Implement auth endpoints (register/login/refresh).","labels":"backend,auth","estimation":"2d"}
+]

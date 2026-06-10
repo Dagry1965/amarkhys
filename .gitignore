@@ -1,0 +1,1 @@
+.env pycache/ *.pyc venv/ node_modules/ *.sqlite3 .DS_Store

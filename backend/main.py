@@ -1,11 +1,17 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from database import Base, engine
-from models import Client, Vehicle, Appointment, Intervention, InterventionLineService, InterventionLineProduct, Invoice, Payment
 from routes import router
 
-# Crée les tables si besoin
 Base.metadata.create_all(bind=engine)
+app = FastAPI(title="Garage ERP API")
 
-app = FastAPI(title="Garage ERP API (test)")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(router)
